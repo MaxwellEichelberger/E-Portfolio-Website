@@ -12,7 +12,17 @@ h3 {
     color: #A8DADC
 }
 
+.navBar {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
 .navBar h3{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20%;
     width: fit-content;
     display: inline-block;
     padding: 10px;
