@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxwell Eichelberger's E-Portfolio</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="contact-form.css">
 
     <style>
         .linkIcon {
@@ -23,29 +22,29 @@
     </style>
 
     <script>
-        slideshowOneSlide = 1;
+        eLibSlide = 1;
         function changeELibSlideshowRight()
         {
             var img = document.getElementById("ELibSlideshowImg");
             var title = document.getElementById("ELibSlideshowTitle");
-            if (slideshowOneSlide == 1)
+            if (eLibSlide == 1)
             {
                 img.src="images/ELibScreenshot2.png"
                 title.textContent = "User's Homepage Showcasing their Entire Library"
-                slideshowOneSlide = 2;
+                eLibSlide = 2;
             }
-            else if (slideshowOneSlide == 2)
+            else if (eLibSlide == 2)
             {
                 img.src="images/ELibScreenshot3.png"
                 title.textContent = "Editing and Inputting Book Information, such as Author, Genre, and Page Count"
-                slideshowOneSlide = 3;
+                eLibSlide = 3;
 
             }
             else
             {
                 img.src="images/ELibScreenshot1.png"
                 title.textContent = "Landing Page and Login/Create Account Screen"
-                slideshowOneSlide = 1;
+                eLibSlide = 1;
             }
             return false;
         }
@@ -53,27 +52,73 @@
         {
             var img = document.getElementById("ELibSlideshowImg");
             var title = document.getElementById("ELibSlideshowTitle");
-            if (slideshowOneSlide == 1)
+            if (eLibSlide == 1)
             {
                 img.src="images/ELibScreenshot3.png"
                 title.textContent = "Editing and Inputting Book Information, such as Author, Genre, and Page Count"
-                slideshowOneSlide = 3;
+                eLibSlide = 3;
             }
-            else if (slideshowOneSlide == 3)
+            else if (eLibSlide == 3)
             {
                 img.src="images/ELibScreenshot2.png"
                 title.textContent = "User's Homepage Showcasing Their Entire Library"
-                slideshowOneSlide = 2;
+                eLibSlide = 2;
 
             }
             else
             {
                 img.src="images/ELibScreenshot1.png"
                 text.textContent = "Landing Page and Login/Create Account Screen"
-                slideshowOneSlide = 1;
+                eLibSlide = 1;
             }
             return false;
         }
+
+        enDSlide = 1;
+        function changeEnDSlideshowRight()
+        {
+            var img = document.getElementById("EnDSlideshowImg");
+            if (enDSlide == 1)
+            {
+                img.src="images/EnDScreenshot2.JPG"
+                enDSlide = 2;
+            }
+            else if (enDSlide == 2)
+            {
+                img.src="images/EnDScreenshot3.JPG"
+                enDSlide = 3;
+
+            }
+            else
+            {
+                img.src="images/EnDScreenshot1.JPG"
+                enDSlide = 1;
+            }
+            return false;
+        }
+
+        function changeEnDSlideshowLeft()
+        {
+            var img = document.getElementById("EnDSlideshowImg");
+            if (enDSlide == 1)
+            {
+                img.src="images/EnDScreenshot3.JPG"
+                enDSlide = 3;
+            }
+            else if (enDSlide == 3)
+            {
+                img.src="images/EnDScreenshot2.JPG"
+                enDSlide = 2;
+
+            }
+            else
+            {
+                img.src="images/EnDScreenshot1.JPG"
+                enDSlide = 1;
+            }
+            return false;
+        }
+    
     </script>
 
 </head>
@@ -107,7 +152,6 @@
     <hr>
     <h2 id="projects">Projects</h2>
     <h3>E-Library</h3>
-
         <div class="ELibSlideshow">
             <img id="ELibSlideshowImg" src="images/ELibScreenshot1.png" width="500px" height="250px">
             <p id="ELibSlideshowTitle">Landing Page and Login/Create Account Screen</p>
@@ -122,37 +166,21 @@
     <hr>
     <h2 id="extracurriculars">Extracurriculars</h2>
     <h3>Ethics & Dragons</h3>
+    <h4>Team Lead</h4>
+        <div class="EnDSlideshow">
+            <img id="EnDSlideshowImg" src="/images/EnDScreenshot1.JPG" width="400px" height="250px">
+            <br>
+            <button id="slideshowButton" onclick="changeEnDSlideshowLeft();"><-</button>
+            <button id="slideshowButton" onclick="changeEnDSlideshowRight();">-></button>
+        </div>
+        <br>
+        <p>Responsible for Leading 2 Libraries in Ethics and Dragons Instrcution.
+            Ethics and Dragons is a 11-18 Afterschool Library Program whihc teaches kids ethical decision making through playing Dungeons and Dragons.
+        </p>
     <hr>
     <h2 id="contact">Contact</h2>
-    <div class="fcf-body">
-
-        <div id="fcf-form">
-        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-            <div class="fcf-form-group">
-                <label for="Name" class="fcf-label">Your name</label>
-                <div class="fcf-input-group">
-                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                </div>
-            </div>
-            <div class="fcf-form-group">
-                <label for="Email" class="fcf-label">Your email address</label>
-                <div class="fcf-input-group">
-                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                </div>
-            </div>
-            <div class="fcf-form-group">
-                <label for="Message" class="fcf-label">Your message</label>
-                <div class="fcf-input-group">
-                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-                </div>
-            </div>
-            <div class="fcf-form-group">
-                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
-            </div>
-        </form>
-        </div>
-    </div>
     <p>Email: eichelmd@mail.uc.edu</p>
+    <p>Phone: +1 (724) 554 - 6683</p>
     </body>
 </body>
 
